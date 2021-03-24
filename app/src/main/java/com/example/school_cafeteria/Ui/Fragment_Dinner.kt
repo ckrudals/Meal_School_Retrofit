@@ -5,18 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.school_cafeteria.databinding.FragmentBreakBinding
+import com.example.school_cafeteria.databinding.FragmentDinnerBinding
 
-class Fragment_Break : Fragment() {
-    private var _binding: FragmentBreakBinding? = null
+class Fragment_Dinner : Fragment() {
+    private var _binding: FragmentDinnerBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
+        _binding = FragmentDinnerBinding.inflate(inflater, container, false)
 
-        _binding = FragmentBreakBinding.inflate(inflater, container, false)
 
 
 
@@ -26,7 +26,6 @@ class Fragment_Break : Fragment() {
         return binding.root
 
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
