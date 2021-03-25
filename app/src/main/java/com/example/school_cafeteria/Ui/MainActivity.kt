@@ -35,10 +35,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.meal_activity_main)
 
-        binding.dayText.text = formatted
+         binding.dayText.setText(formatted)
 
-        Retrofit(1)
+   
 
+
+        val button1 = R.id.dinner_btn
         binding.breakBtn.setOnClickListener {
             Log.d(TAG, "onClick: bereak")
             Retrofit(1)
@@ -82,18 +84,20 @@ class MainActivity : AppCompatActivity() {
                             val obj = res[i]
                             val row = obj.DDISH_NM
                             Log.d(TAG, "onResponse: $row")
+
                             when (time) {
+
                                 1 -> {
-                                    binding.text.text = row
-                                    Log.d(TAG, "onResponse: $binding.text.text")
+                                    binding.mealText.text = row
+                                    Log.d(TAG, "아침: ${binding.mealText.text}")
                                 }
                                 2 -> {
-                                    binding.text.text = row
-                                    Log.d(TAG, "onResponse: $binding.text.text")
+                                    binding.mealText.setText(row)
+                                    Log.d(TAG, "점심: ${binding.mealText.text}")
                                 }
                                 3 -> {
-                                    binding.text.text = row
-                                    Log.d(TAG, "onResponse: $binding.text.text")
+                                    binding.mealText.setText(row)
+                                    Log.d(TAG, "저녘: ${binding.mealText.text}")
 
                                 }
                             }
@@ -110,7 +114,6 @@ class MainActivity : AppCompatActivity() {
         })
     }
 }
-
 
 
 

@@ -5,6 +5,7 @@
 
 
 
+
     <TextView
         android:id="@+id/text"
         android:text="ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ"
